@@ -1,0 +1,118 @@
+body {
+    --bs-body-font-family: "Monsterrat", sans-serif;
+
+    --gradient-light: linear-gradient(to right, #EFDE42, #A1F15A, #7EEDED);
+    --border-color: hsla(158, 16%, 20%, 0.25);
+    --background-primary: white;
+    
+    --border-normal: solid 1px var(--border-color);
+    --radius-frame: 16px;
+    --radius-element: 8px;
+    --graphic-inset: -12vh;
+}
+
+div {
+    position: relative;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100svh; /* Asegura que el contenedor ocupe toda la altura de la ventana */
+    margin: 0; /* Elimina el margen predeterminado del body */
+    background-color: var(--background-primary);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.graphic-top {
+    width: 100%;
+    padding-top: 4vh;
+    margin-bottom: var(--graphic-inset);
+    background: var(--gradient-light);     
+}
+.graphic-bottom {
+    background: var(--gradient-light);     
+    margin-top: var(--graphic-inset);
+    width: 100%;
+    padding-bottom: 4vh;
+    z-index: -1;
+}
+
+.curva-top {
+    height: 15vh;  /* Ajusta la altura según tus necesidades */
+    background: url(images/wave.png);
+  
+    background-repeat: no-repeat;
+    background-size: cover; /* Evita que la imagen se repita y cubre todo el fondo */
+}
+.curva-bot {
+    height: 15vh;  /* Ajusta la altura según tus necesidades */
+    background: url(images/wave.png);
+    background-repeat: no-repeat;
+    background-size: cover; /* Evita que la imagen se repita y cubre todo el fondo */
+
+    transform: scaleY(-1) scaleX(-1); /* Invierte la imagen vertical y horizontalmente */
+}
+
+.eval-content {
+    width: 90%;
+    min-width: 260px;
+    max-width: 480px;
+    max-height: 700px;
+    
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 32px;
+    
+    background-color: var(--background-primary);
+    border-radius: var(--radius-frame);
+    box-shadow: #0003 1px 2px 32px;
+}
+
+.layout-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 4px;
+}
+
+.banner-image {
+    width: 100%;
+    height: 100%;
+    min-height: 128px;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+.layout-center.top {
+    gap: 16px;
+}
+.greeting-title {
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 1em;
+}
+
+.next-button {
+    padding: 8px 12px;
+    background: var(--gradient-light);
+    border-radius: var(--radius-element);
+    border: var(--border-normal);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1ch;
+}
+
+.bi {
+    line-height: 1ch;
+}
